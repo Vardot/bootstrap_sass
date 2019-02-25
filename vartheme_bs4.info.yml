@@ -1,0 +1,70 @@
+name: Varbase bootstrap 4 theme
+type: theme
+description: 'Varbase bootstrap 4 theme.'
+# version: VERSION
+core: 8.x
+base theme: bootstrap_barrio
+
+libraries:
+# Bootstrap styles and scripts libraries.
+  - vartheme_bs4/bootstrap-styles
+  - vartheme_bs4/bootstrap-scripts
+# vartheme_bs4 styles and scripts libraries.
+  - vartheme_bs4/vartheme_bs4-styles
+  - vartheme_bs4/vartheme_bs4-scripts
+# Global styles and scripts libraries.
+  - vartheme_bs4/global-styles
+  - vartheme_bs4/global-scripts
+# Icons
+  #- vartheme_bs4/material_design_icons
+  #- vartheme_bs4/fontawesome
+# Fonts
+  #- vartheme_bs4/roboto
+
+libraries-override:
+  #barrio theme
+  bootstrap_barrio/global-styling: false
+  #barrio components
+  bootstrap_barrio/verticaltabs: vartheme_bs4/verticaltabs
+  bootstrap_barrio/tabs: vartheme_bs4/tabs
+  bootstrap_barrio/sidebar-collapse: vartheme_bs4/sidebar-collapse
+  bootstrap_barrio/node: vartheme_bs4/node
+  bootstrap_barrio/maintenance_page: vartheme_bs4/maintenance_page
+  bootstrap_barrio/indented: vartheme_bs4/indented
+  bootstrap_barrio/form: vartheme_bs4/form
+  bootstrap_barrio/file: vartheme_bs4/file
+  bootstrap_barrio/dropbutton: vartheme_bs4/dropbutton
+  bootstrap_barrio/book-navigation: vartheme_bs4/book-navigation
+  bootstrap_barrio/affix: vartheme_bs4/affix
+
+  #varbase overrides
+  varbase_bootstrap_paragraphs/vbp-colors:
+    css:
+      theme:
+        css/theme/vbp-colors.theme.css: css/theme/vbp-colors.theme.css
+  vbp_text_and_image/vbp_text_and_image_default:
+    css:
+      layout:
+        css/layout/vbp_text_and_image_default.layout.css: css/layout/vbp_text_and_image_default.layout.css
+  varbase_media/varbase_video_player:
+    css:
+      theme:
+        css/theme/varbase-video-player.theme.css: css/theme/varbase-video-player.theme.css
+  varbase_heroslider_media/general-styling:
+    css:
+      theme:
+        css/theme/varbase-heroslider-media.theme.css: css/theme/varbase-heroslider-media.theme.css
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  hero_slider: 'Media Hero Slider'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'

@@ -1,0 +1,9 @@
+/**
+ * @file
+ * Feed icon styles for Bootstrap Barrio.
+ */
+/* VARIABLES */
+.feed-icon {
+  border-bottom: none;
+  display: inline-block;
+  padding: 1rem 0 0 0; }

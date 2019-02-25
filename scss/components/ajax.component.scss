@@ -1,0 +1,34 @@
+// AJAX (throbber) styling.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
+@import "../variables";                              // Vartheme variables.
+@import "../mixins";                               // Vartheme mixins.
+@import "../typography";                           // Vartheme typography.
+// -----------------------------------------------------------------------------
+
+.js-form-managed-file {
+  position: relative;
+  input[type='file'] + .varicon{
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+  }
+}
+.throbber-added{
+  position: relative;
+  padding-right: 50px;
+  position: relative;
+}
+.btn .ajax-throbber {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &::before{
+    background-image: url('../../images/icons/refresh-white.svg') !important;
+  }
+}
